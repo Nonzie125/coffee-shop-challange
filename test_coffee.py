@@ -16,13 +16,13 @@ class TestCoffee:
         customer_1 = Customer("John")
         customer_2 = Customer("Alice")
         
-        # Create orders and add to the coffee object
+        # incase of orders and added to the coffee object
         order_1 = Order(customer_1, coffee, 5.0)
         order_2 = Order(customer_2, coffee, 6.0)
         coffee.add_order(order_1)
         coffee.add_order(order_2)
 
-        # Check if the coffee object tracks all orders correctly
+        # to tracks all orders correctly
         orders = coffee.orders()
         assert len(orders) == 2
         assert order_1 in orders
@@ -34,13 +34,13 @@ class TestCoffee:
         customer_1 = Customer("John")
         customer_2 = Customer("Alice")
         
-        # Create multiple orders from different customers
+        # for multiple orders from different customers
         order_1 = Order(customer_1, coffee, 5.0)
         order_2 = Order(customer_2, coffee, 6.0)
         coffee.add_order(order_1)
         coffee.add_order(order_2)
 
-        # Test if coffee object tracks unique customers correctly
+        # this will check if coffee object tracks unique customers correctly
         customers = coffee.customers()
         assert len(customers) == 2
         assert customer_1 in customers
@@ -67,13 +67,13 @@ class TestCoffee:
         customer_1 = Customer("John")
         customer_2 = Customer("Alice")
         
-        # Create orders with different prices
+        # To create orders with different prices
         order_1 = Order(customer_1, coffee, 5.0)
         order_2 = Order(customer_2, coffee, 7.0)
         coffee.add_order(order_1)
         coffee.add_order(order_2)
         
-        # Check if the average price is correctly calculated
+        # Checking if the average price is correctly calculated
         assert coffee.average_price() == 6.0  # Average of 5.0 and 7.0 is 6.0
 
     def test_average_price_no_orders(self):

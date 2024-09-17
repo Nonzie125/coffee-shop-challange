@@ -16,7 +16,7 @@ class TestCustomer:
         coffee_1 = Coffee("Latte")
         coffee_2 = Coffee("Espresso")
         
-        # Customer creates two orders
+        # if Customer creates two orders
         order_1 = customer.create_order(coffee_1, 5.0)
         order_2 = customer.create_order(coffee_2, 4.0)
         
@@ -27,16 +27,16 @@ class TestCustomer:
 
     def test_coffees_method(self):
         '''Test if the coffees method returns a unique list of coffees the customer has ordered'''
-        customer = Customer("John")
+        customer = Customer("Nonzamo")
         coffee_1 = Coffee("Latte")
         coffee_2 = Coffee("Espresso")
         
-        # John orders the same coffee multiple times
+        # Nonzamo orders the same coffee multiple times
         customer.create_order(coffee_1, 5.0)
         customer.create_order(coffee_1, 6.0)
         customer.create_order(coffee_2, 4.0)  # A different coffee
         
-        # Get unique coffees the customer has ordered
+        # coffee ordered
         coffees = customer.coffees()
         assert len(coffees) == 2
         assert coffee_1 in coffees
@@ -47,16 +47,17 @@ class TestCustomer:
         customer = Customer("Alice")
         coffee = Coffee("Cappuccino")
         
-        # Customer creates an order
+        # a order created by the customer
+        # creates an order
         order = customer.create_order(coffee, 5.5)
         
-        # Test if the order is added to the customer's orders list
+        # this will Test if the order is added to the customer's orders list
         assert order in customer.orders()
         
-        # Test if the coffee object tracks the order
+        #  if the coffee object tracks the order
         assert order in coffee.orders()
         
-        # Test if the correct price was assigned
+        #  if the correct price was assigned
         assert order.price == 5.5
         assert order.customer == customer
         assert order.coffee == coffee

@@ -15,5 +15,6 @@ class Customer:
         '''Creates a new order for the customer and adds it to the list of orders'''
         order = order(self, coffee, price)
         self._orders.append(order)
-        coffee.add_order(order)  # Assuming the Coffee class has an add_order method
+        coffee.add_order(order)  # inncase of an add method
+    
         return order
