@@ -22,13 +22,9 @@ Keep in mind the concept of a single source of truth for your data.
 Create Class Files
 Create three Python files in THE project directory:
 
-customer.py: I Initialize a Customer with a name (string between 1 and 15 characters).
-              Implement a property name with the necessary validation.
-coffee.py:I Initialize a Coffee with a name (string, at least 3 characters long).
-          Implement a property name with the necessary validation.
-order.py: I Initialize an Order with a Customer instance, a Coffee instance, and a price (float between 1.0 and 10.0).
-          Implement properties customer, coffee, and price with the necessary validation.
-          In each file, a class is defined corresponding to the file name (e.g., class Customer in customer.py).
+customer.py: I Initialize a Customer with a name (string between 1 and 15 characters), then Implemented a property name with the necessary validation.
+coffee.py:I Initialize a Coffee with a name (string, at least 3 characters long),then implemented a property name with the necessary validation.
+order.py: I Initialize an Order with a Customer instance, a Coffee instance, and a price (float between 1.0 and 10.0) then ,Implemented properties customer, coffee, and price with the necessary validation.In each file, a class is defined corresponding to the file name (e.g., class Customer in customer.py).
  
 I later defined the  Object Relationship Methods and Properties between the three files and Implemented Aggregate and Association Methods 
 where in the customer.py file 
